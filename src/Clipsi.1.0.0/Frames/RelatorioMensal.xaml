@@ -1,0 +1,57 @@
+﻿<Page x:Class="Teste.Frams.RelatorioMensal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Teste.Frams"
+      mc:Ignorable="d" 
+      d:DesignHeight="613" d:DesignWidth="1000"
+      Title="RelatorioMensal"
+
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}" >
+
+    <Grid Background="#FFCCCEDB">
+
+        <Grid Margin="0" VerticalAlignment="Top" Height="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="759*"/>
+                <ColumnDefinition Width="241*"/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:PackIcon Kind="PaymentSettings" Width="34" Height="34" Foreground="#FFF" VerticalAlignment="Bottom" Margin="10,0,0,0"/>
+            <TextBlock Text="Relatório Mensal" Width="180" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="21" FontWeight="Medium" Foreground="#FFF" Margin="56,0,0,4" Height="25"/>
+        </Grid>
+        <Grid Margin="0,65,0,0">
+            <Grid Height="55" Margin="10,0,10,493" VerticalAlignment="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="241*"/>
+                    <ColumnDefinition Width="739*"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox Margin="0,6,0,7" materialDesign:HintAssist.Hint="Escolha o Mês" materialDesign:HintAssist.IsFloating="True" FontSize="15" HorizontalAlignment="Left" Width="240">
+                    <ComboBoxItem x:Name="ComboBoxItemJaneiro" Content="Janeiro"/>
+                    <ComboBoxItem x:Name="ComboBoxItemFevereiro" Content="Fevereiro"/>
+                    <ComboBoxItem x:Name="ComboBoxItemMarco" Content="Março"/>
+                    <ComboBoxItem x:Name="ComboBoxItemAbril" Content="Abril"/>
+                    <ComboBoxItem x:Name="ComboBoxItemMaio" Content="Maio"/>
+                    <ComboBoxItem x:Name="ComboBoxItemJunho" Content="Junho"/>
+                    <ComboBoxItem x:Name="ComboBoxItemJulho" Content="Julho"/>
+                    <ComboBoxItem x:Name="ComboBoxItemAgosto" Content="Agosto"/>
+                    <ComboBoxItem x:Name="ComboBoxItemSetembro" Content="Setembro"/>
+                    <ComboBoxItem x:Name="ComboBoxItemOutubro" Content="Outubro"/>
+                    <ComboBoxItem x:Name="ComboBoxItemNovembro" Content="Novembro"/>
+                    <ComboBoxItem x:Name="ComboBoxItemDezembro" Content="Dezembro"/>
+                </ComboBox>
+            </Grid>
+
+            <Grid Margin="10,60,10,0">
+                <DataGrid x:Name="DataGridRelatorio" Margin="0,0,0,10"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

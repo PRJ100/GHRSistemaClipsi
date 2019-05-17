@@ -1,0 +1,82 @@
+﻿<Page x:Class="Teste.Frams.CadastroUsuario"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Teste.Frams"
+      mc:Ignorable="d" 
+      d:DesignHeight="613" d:DesignWidth="1000"
+      Title="CadastroUsuario"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}" ScrollViewer.HorizontalScrollBarVisibility="Auto" Loaded="Page_Loaded">
+
+    <Grid Background="#FFCCCEDB">
+
+        <Grid Margin="0,0,10,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="749*"/>
+                <ColumnDefinition Width="241*"/>
+            </Grid.ColumnDefinitions>
+            <materialDesign:PackIcon Kind="People" Width="34" Height="34" Foreground="#FFF" VerticalAlignment="Bottom" Margin="10,0,0,-3"/>
+            <TextBlock Text="Cadastros da Paciênte" Width="219" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="21" FontWeight="Medium" Foreground="#FFF" Margin="55,0,0,-1" Height="25"/>
+
+            <TextBox x:Name="textBoxBuscar" materialDesign:HintAssist.Hint="Buscar" materialDesign:HintAssist.IsFloating="True" Height="40" Margin="10,10,54,10" VerticalAlignment="Center" Grid.Column="1"/>
+            <Button x:Name="buttonBuscar" Width="49" Height="40" Background="{x:Null}" BorderBrush="{x:Null}"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Margin="0,10" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" RenderTransformOrigin="0.504,0.5" Click="ButtonBuscar_Click">
+                <materialDesign:PackIcon Kind="Search" Width="27" Height="Auto" Foreground="#000072"/>
+            </Button>
+        </Grid>
+
+        <Grid Margin="10,65,0,0" VerticalAlignment="Top" Height="112">
+            <Grid Height="55" VerticalAlignment="top" Margin="0,0,34,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="46*"/>
+                    <ColumnDefinition Width="46*"/>
+                    <ColumnDefinition Width="46*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="textBoxCodigo" FontSize="12" materialDesign:HintAssist.Hint="Codigo" IsEnabled="false" materialDesign:HintAssist.IsFloating="True" Height="36" Margin="0,9,0,10"/>
+                <TextBox x:Name="textBoxUsuario" FontSize="12" materialDesign:HintAssist.Hint="Usuário" materialDesign:HintAssist.IsFloating="True" Height="36" Margin="5,9,3,10" Grid.Column="1"/>
+                <PasswordBox x:Name="passwordBoxSenha" FontSize="12" materialDesign:HintAssist.Hint="Senha" materialDesign:HintAssist.IsFloating="True" Height="36" Margin="4,9,0,10" Grid.Column="2"/>
+            </Grid>
+
+            <Grid Height="55" Margin="0,58,34,-1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="46*"/>
+                    <ColumnDefinition Width="45*"/>
+                    <ColumnDefinition Width="47*"/>
+                </Grid.ColumnDefinitions>
+                <PasswordBox x:Name="passwordBoxConfirmaSenha" FontSize="13" materialDesign:HintAssist.Hint="Confirme a Senha" materialDesign:HintAssist.IsFloating="True" Margin="0,10,0,9"/>
+                <ComboBox x:Name="comboBoxNivelAcesso" FontSize="13" materialDesign:HintAssist.Hint="Nivel de Acesso" materialDesign:HintAssist.IsFloating="True" Height="36" Margin="5,10,0,9" Grid.Column="1">
+                    <ComboBoxItem Content="0"/>
+                    <ComboBoxItem Content="1"/>
+                    <ComboBoxItem Content="2"/>
+                </ComboBox>
+                <Label x:Name="labelSenha" Foreground="red" Content="" HorizontalAlignment="Left" Margin="9.8,13,0,0" VerticalAlignment="Top" Grid.Column="2" Width="315" FontSize="16" FontWeight="Bold"/>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="55" Margin="0,0,0,-61" Width="966">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="37*"/>
+                    <ColumnDefinition Width="124*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="buttonCadastrar" Background="#000072" BorderBrush="{x:Null}" Content="Novo" Width="90" Height="26" FontSize="12" Padding="13 0 13 0" HorizontalAlignment="Left" Margin="0,14,0,15" Click="ButtonCadastrar_Click"/>
+                <Button x:Name="buttonAlterar" Background="#000072" BorderBrush="{x:Null}" Content="Alterar" Width="90" Height="26" FontSize="12" Padding="13 0 13 0" HorizontalAlignment="Left" Margin="129,14,0,15" IsEnabled="False" Click="ButtonAlterar_Click"/>
+                <Button x:Name="buttonExcluir" Background="#000072" BorderBrush="{x:Null}" Content="Excluir" Width="90" Height="26" FontSize="12" Padding="13 0 13 0" HorizontalAlignment="Left" Margin="37.6,14,0,15" IsEnabled="False" Grid.Column="1" Click="ButtonExcluir_Click"/>
+                <Button x:Name="buttonSalvar" Background="#000072" BorderBrush="{x:Null}" Content="Salvar" Width="90" Height="26" FontSize="12" Padding="13 0 13 0" HorizontalAlignment="Left" Margin="166.6,14,0,15" IsEnabled="False" Grid.Column="1" Click="ButtonSalvar_Click"/>
+                <Button x:Name="buttonCancelar" Background="#000072" BorderBrush="{x:Null}" Content="Cancelar" Width="90" Height="26" FontSize="12" Padding="13 0 13 0" HorizontalAlignment="Left" Margin="292.6,14,0,15" IsEnabled="False" Grid.Column="1" Click="ButtonCancelar_Click"/>
+                <Label Content="Número de cadastros:" HorizontalAlignment="Left" Margin="485.6,13,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                <Label x:Name="conta" Content="0" HorizontalAlignment="Left" Margin="621.6,13,0,0" VerticalAlignment="Top" Width="107" Grid.Column="1"/>
+            </Grid>
+
+            <Grid Margin="0,0,0,-435" Height="374" VerticalAlignment="Bottom">
+                <DataGrid x:Name="dataGridConsulta" Margin="0,0,10,0" Height="370" VerticalAlignment="Top" SelectionMode="Single" IsReadOnly="True" MouseDoubleClick="DataGridConsulta_MouseDoubleClick" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
