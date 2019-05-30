@@ -64,18 +64,28 @@
                     <TranslateTransform />
                 </TransformGroup>
             </Grid.RenderTransform>
-            <Frame Margin="0,35,0,0" x:Name="FramePaginas" Source="Clipsi.1.0.0;component/Frames/Home.xaml" NavigationUIVisibility="Hidden" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Content="(Clipsi.1.0.0;component/Frames/Home.xaml)"/>
+            <Frame Margin="0,35,0,0" x:Name="FramePaginas" Source="component/Frames/Home.xaml" NavigationUIVisibility="Hidden" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Content="(Clipsi.1.0.0;component/Frames/Home.xaml)"/>
         </Grid>
 
         <!---Cabeçalho-->
         <Grid Height="35" VerticalAlignment="Top"  Background="#00008C">
             <!---Usuário ativo-->
+            <Grid HorizontalAlignment="Left" Margin="100 0 0 0"  Width="172">
+                <materialDesign:PackIcon Kind="ShapeSquarePlus" Width="Auto" Height="18" Foreground="#fff" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Button Content="Novo Agendamento" x:Name="buttonNovoAgendamento"  Height="30" Margin="0,5,0,0" FontSize="13" Background="{x:Null}" BorderBrush="{x:Null}"  HorizontalAlignment="Left" Width="172" VerticalAlignment="Top" Click="ButtonNovoAgendamento_Click" />
+            </Grid>
+            <Grid Margin="270 0 0 0" HorizontalAlignment="Left" Width="146" >
+                <materialDesign:PackIcon Kind="Register" Width="Auto" Height="18" Foreground="#fff" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Button Content="Novo Cadastro" Height="21" x:Name="buttonNovoCadastro" FontSize="13" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,7,0,6" HorizontalAlignment="Left" Width="146" Click="ButtonNovoCadastro_Click"/>
+            </Grid>
             <StackPanel Orientation="Horizontal" HorizontalAlignment ="Right" Margin="0,0,88,0" Width="150">
                 <materialDesign:PackIcon Kind="User" Width="21" Height="Auto" Foreground="#FFFFFF" VerticalAlignment="Center"/>
                 <TextBlock x:Name="textBlockUsuario" Text="Usuário" FontSize="12" Foreground="#FFFFFF" VerticalAlignment="Center" Margin="13,13,0,10"/>
             </StackPanel>
-
-            <Button x:Name="btMinimizarJanela" Margin="0 0 35 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" HorizontalAlignment="Right" Click="BtMinimizarJanela_Click">
+            <Button x:Name="logout" Margin="0,0,120,2" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Logout_Click">
+                <materialDesign:PackIcon Kind="Logout" Width="21" Height="Auto" Foreground="#FFFFFF"/>
+            </Button>
+            <Button x:Name="btMinimizarJanela" Margin="0 0 35 0" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" HorizontalAlignment="Right">
                 <materialDesign:PackIcon Kind="WindowMinimize" Width="21" Height="Auto" Foreground="#FFFFFF"/>
             </Button>
             <Button x:Name="btFechaJanela" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" HorizontalAlignment="Right" Click="BtFechaJanela_Click">
@@ -187,7 +197,7 @@
                                                 <TextBlock Text="Anaminase" FontSize="13" Margin="13" Foreground="#FFFFFF"/>
                                             </StackPanel>
                                         </ListViewItem>
-                                           <!--Submenu cadastro de atendimento-->
+                                        <!--Submenu cadastro de atendimento-->
                                         <ListViewItem Height="45" Padding="0" x:Name="MenuCadastroAtendimento" Selected="MenuCadastroAtendimento_Selected">
                                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                                 <materialDesign:PackIcon Kind="Percent" Width="18" Height="Auto" Margin="10" Foreground="#FFFFFF"/>
@@ -223,7 +233,7 @@
                                     </TransformGroup>
                                 </materialDesign:PackIcon.RenderTransform>
                             </materialDesign:PackIcon>
-                            
+
                             <materialDesign:PopupBox PlacementMode="RightAndAlignMiddles" Foreground="#FFFFFF" Opacity="0" StaysOpen="False" Width="228" Margin="0,0,0,-0.4" HorizontalAlignment="Right">
                                 <StackPanel Background="#FF05569C">
                                     <ListView>

@@ -105,5 +105,21 @@ namespace Teste.Frams
         {
 
         }
+
+        private void ButtonNovoAgendamento_Click(object sender, RoutedEventArgs e)
+        {
+            FramePaginas.Content = new AgendamentoConsultas();
+        }
+
+        private void ButtonNovoCadastro_Click(object sender, RoutedEventArgs e)
+        {
+            FramePaginas.Content = new Cadastro();
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new Login().Show();
+        }
     }
 }

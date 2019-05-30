@@ -33,16 +33,7 @@
                     <ColumnDefinition Width="147*"/>
                     <ColumnDefinition Width="671*"/>
                 </Grid.ColumnDefinitions>
-                <Grid HorizontalAlignment="Right" Width="172">
-                    <materialDesign:PackIcon Kind="ShapeSquarePlus" Width="Auto" Height="18" Foreground="#fff" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,8,154,8" RenderTransformOrigin="0.881,0.333"/>
-                    <Button Content="Novo Agendamento" x:Name="buttonNovoAgendamento"  Height="Auto" FontSize="13" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,0,0,5.6" HorizontalAlignment="Left" Width="172" Click="ButtonNovoAgendamento_Click"/>
-                </Grid>
-
-                <Grid Margin="0,0,1,0" HorizontalAlignment="Right" Width="146" Grid.Column="1">
-                    <materialDesign:PackIcon Kind="Register" Width="Auto" Height="18" Foreground="#fff" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,8,128,8" RenderTransformOrigin="0.881,0.333"/>
-                    <Button Content="Novo Cadastro" Height="21" x:Name="buttonNovoCadastro" FontSize="13" Background="{x:Null}" BorderBrush="{x:Null}" Margin="0,7,0,6" HorizontalAlignment="Left" Width="146"/>
-                </Grid>
-
+                
             </Grid>
 
             <Grid Margin="0,0,10,0" Height="501">
