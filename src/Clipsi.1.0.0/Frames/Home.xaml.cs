@@ -41,5 +41,10 @@ namespace Teste.Frams
         {
 
         }
+
+        private void ButtonNovoAgendamento_Click(object sender, RoutedEventArgs e)
+        {
+            //this. = new Agendamento();
+        }
     }
 }

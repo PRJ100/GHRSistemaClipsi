@@ -29,6 +29,7 @@ namespace Teste.Frams
         {
             if (textBoxUsuario.Text != "" && passwordBoxSenha.Password != "")
             {
+                
                 try
                 {
                     using (DbContexto ctx = new DbContexto())

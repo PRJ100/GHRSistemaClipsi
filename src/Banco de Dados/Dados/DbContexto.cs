@@ -19,7 +19,7 @@ namespace Banco_de_Dados.Dados
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=LAPTOP-28GS1SOJ\SQLEXPRESS;Database=SISTEMACLIPSI;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=DEAN\SQLEXPRESS;Database=SISTEMACLIPSI;Trusted_Connection=True;");
 
         }
     }

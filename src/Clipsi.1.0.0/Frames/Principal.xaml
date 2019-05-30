@@ -64,7 +64,7 @@
                     <TranslateTransform />
                 </TransformGroup>
             </Grid.RenderTransform>
-            <Frame Margin="0,35,0,0" x:Name="FramePaginas" Source="/Teste;component/Frams/Home.xaml" NavigationUIVisibility="Hidden" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+            <Frame Margin="0,35,0,0" x:Name="FramePaginas" Source="Clipsi.1.0.0;component/Frames/Home.xaml" NavigationUIVisibility="Hidden" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Content="(Clipsi.1.0.0;component/Frames/Home.xaml)"/>
         </Grid>
 
         <!---Cabeçalho-->
