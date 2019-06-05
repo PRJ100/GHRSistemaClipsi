@@ -64,7 +64,7 @@
                     <TranslateTransform />
                 </TransformGroup>
             </Grid.RenderTransform>
-            <Frame Margin="0,35,0,0" x:Name="FramePaginas" Source="component/Frames/Home.xaml" NavigationUIVisibility="Hidden" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Content="(Clipsi.1.0.0;component/Frames/Home.xaml)"/>
+            <Frame Margin="0,35,0,0" x:Name="FramePaginas" Source="" NavigationUIVisibility="Hidden" UseLayoutRounding="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" Content=""/>
         </Grid>
 
         <!---Cabeçalho-->
@@ -156,6 +156,13 @@
                                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                                 <materialDesign:PackIcon Kind="Percent" Width="18" Height="Auto" Margin="10" Foreground="#FFFFFF"/>
                                                 <TextBlock Text="Planos" FontSize="13" Margin="13" Foreground="#FFFFFF"/>
+                                            </StackPanel>
+                                        </ListViewItem>
+                                        <!-- Submenu cadastro de medicamentos-->
+                                        <ListViewItem Height="45" Padding="0" x:Name="MenuCadastroMedicamentos" Selected="MenuCadastroMedicamentos_Selected">
+                                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                                <materialDesign:PackIcon Kind="Medicine" Width="18" Height="Auto" Margin="10" Foreground="#FFFFFF"/>
+                                                <TextBlock Text="Medicamentos" FontSize="13" Margin="13" Foreground="#FFFFFF"/>
                                             </StackPanel>
                                         </ListViewItem>
 

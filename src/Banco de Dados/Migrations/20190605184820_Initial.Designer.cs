@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Banco_de_Dados.Migrations
 {
     [DbContext(typeof(DbContexto))]
-    [Migration("20190530174342_Initial")]
+    [Migration("20190605184820_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -125,6 +125,28 @@ namespace Banco_de_Dados.Migrations
                     b.HasKey("codigo");
 
                     b.ToTable("lancamentos");
+                });
+
+            modelBuilder.Entity("Banco_de_Dados.Classes.Medicamento", b =>
+                {
+                    b.Property<int>("codigo")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("descricao")
+                        .HasMaxLength(200);
+
+                    b.Property<string>("nomeMedicamento")
+                        .HasMaxLength(100);
+
+                    b.Property<int>("numeroRegistroMinisterio");
+
+                    b.Property<string>("unidadeMedida")
+                        .HasMaxLength(10);
+
+                    b.HasKey("codigo");
+
+                    b.ToTable("medicamentos");
                 });
 
             modelBuilder.Entity("Banco_de_Dados.Classes.Medico", b =>

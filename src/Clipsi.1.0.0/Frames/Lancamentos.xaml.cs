@@ -41,7 +41,7 @@ namespace Teste.Frams
             l.data = comboBoxData.Text;
             l.descricao = TextBoxDescricao.Text;
             l.forma_pagamento = comboBoxFormaPagamento.Text;
-            l.valor = Convert.ToDouble(TextBoxValor.Text);
+            l.valor = Convert.ToDecimal(TextBoxValor.Text);
 
             if (operacao == "cadastrar")
             {
@@ -62,7 +62,7 @@ namespace Teste.Frams
                         l.data = comboBoxData.Text;
                         l.descricao = TextBoxDescricao.Text;
                         l.forma_pagamento = comboBoxFormaPagamento.Text;
-                        l.valor = Convert.ToDouble(TextBoxValor.Text);
+                        l.valor = Convert.ToDecimal(TextBoxValor.Text);
                         ctx.SaveChanges();
                     }
 

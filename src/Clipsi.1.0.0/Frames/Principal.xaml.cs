@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clipsi._1._0._0.Frames;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Teste.Frams
         public Prinipal(string Usuario, string nivel)
         {   
             InitializeComponent();
+            FramePaginas.Content = new Home();
             this.textBlockUsuario.Text = Usuario;
             if(nivel.Equals("0"))
             {
@@ -120,6 +122,11 @@ namespace Teste.Frams
         {
             this.Hide();
             new Login().Show();
+        }
+
+        private void MenuCadastroMedicamentos_Selected(object sender, RoutedEventArgs e)
+        {
+            FramePaginas.Content = new Medicamento();
         }
     }
 }

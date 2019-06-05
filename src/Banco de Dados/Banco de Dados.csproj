@@ -259,13 +259,22 @@
     <Compile Include="Classes\Agendamento.cs" />
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Lancamento.cs" />
+    <Compile Include="Classes\Medicamento.cs" />
     <Compile Include="Classes\Medico.cs" />
     <Compile Include="Classes\Plano.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Dados\DbContexto.cs" />
-    <Compile Include="Migrations\20190530174342_Initial.cs" />
-    <Compile Include="Migrations\20190530174342_Initial.designer.cs">
-      <DependentUpon>20190530174342_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\20190605184820_Initial.cs" />
+    <Compile Include="Migrations\20190605184820_Initial.designer.cs">
+      <DependentUpon>20190605184820_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190605190528_Initial2.cs" />
+    <Compile Include="Migrations\20190605190528_Initial2.designer.cs">
+      <DependentUpon>20190605190528_Initial2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190605202010_Initial3.cs" />
+    <Compile Include="Migrations\20190605202010_Initial3.designer.cs">
+      <DependentUpon>20190605202010_Initial3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DbContextoModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

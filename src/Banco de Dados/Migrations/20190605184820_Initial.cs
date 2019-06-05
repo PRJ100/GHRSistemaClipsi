@@ -69,6 +69,22 @@ namespace Banco_de_Dados.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "medicamentos",
+                columns: table => new
+                {
+                    codigo = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    numeroRegistroMinisterio = table.Column<int>(nullable: false),
+                    nomeMedicamento = table.Column<string>(maxLength: 100, nullable: true),
+                    descricao = table.Column<string>(maxLength: 200, nullable: true),
+                    unidadeMedida = table.Column<string>(maxLength: 10, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_medicamentos", x => x.codigo);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "medico",
                 columns: table => new
                 {
@@ -124,6 +140,9 @@ namespace Banco_de_Dados.Migrations
 
             migrationBuilder.DropTable(
                 name: "lancamentos");
+
+            migrationBuilder.DropTable(
+                name: "medicamentos");
 
             migrationBuilder.DropTable(
                 name: "medico");

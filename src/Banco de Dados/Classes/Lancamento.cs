@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Banco_de_Dados.Classes
 {
@@ -17,9 +13,6 @@ namespace Banco_de_Dados.Classes
         public string data { get; set; }
         public string descricao { get; set; }
         public string forma_pagamento { get; set; }
-        public Nullable<double> valor
-        {
-            get; set;
-        }
+        public decimal valor { get; set; }
     }
 }

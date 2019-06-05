@@ -35,7 +35,16 @@ namespace Teste.Frams
                     dataGridEntradas.ItemsSource = consulta1.ToList();
                     var consulta2 = from c in ctx.Lancamentos where c.tipo.Equals("Saida") select c;
                     dataGridSaidas.ItemsSource = consulta2.ToList();
-                
+
+                    EntradaTotal.Content = consulta1.Sum(x => x.valor);
+                    SaidaTotal.Content = consulta2.Sum(x => x.valor);
+                    double en = Convert.ToDouble(EntradaTotal.Content);
+                    double sa = Convert.ToDouble(SaidaTotal.Content);
+                    SaldoTotal.Content = en + sa;
+
+                    
+
+
                 }
             }
             catch { }
