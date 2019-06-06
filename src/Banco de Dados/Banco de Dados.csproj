@@ -276,6 +276,10 @@
     <Compile Include="Migrations\20190605202010_Initial3.designer.cs">
       <DependentUpon>20190605202010_Initial3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190606183817_Initial4.cs" />
+    <Compile Include="Migrations\20190606183817_Initial4.designer.cs">
+      <DependentUpon>20190606183817_Initial4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DbContextoModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

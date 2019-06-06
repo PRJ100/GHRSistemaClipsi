@@ -38,8 +38,8 @@ namespace Teste.Frams
 
                     EntradaTotal.Content = consulta1.Sum(x => x.valor);
                     SaidaTotal.Content = consulta2.Sum(x => x.valor);
-                    double en = Convert.ToDouble(EntradaTotal.Content);
-                    double sa = Convert.ToDouble(SaidaTotal.Content);
+                    decimal en = Convert.ToDecimal(EntradaTotal.Content);
+                    decimal sa = Convert.ToDecimal(SaidaTotal.Content);
                     SaldoTotal.Content = en + sa;
 
                     
@@ -56,9 +56,9 @@ namespace Teste.Frams
             {
                 using (DbContexto ctx = new DbContexto())
                 {
-                    var consulta1 = "SELECT * FROM lancamentos l WHERE l.data %= "+textBoxBuscar.Text+" AND l.tipo = Entrada";
+                    var consulta1 = from c in ctx.Lancamentos where c.data.Equals(textBoxBuscar.Text) & c.tipo.Equals("Entrada") select c;
                     dataGridEntradas.ItemsSource = consulta1.ToList();
-                    var consulta2 = from c in ctx.Lancamentos where c.data.Contains(textBoxBuscar.Text) & c.tipo.Equals("Saida") select c;
+                    var consulta2 = from c in ctx.Lancamentos where c.data.Equals(textBoxBuscar.Text) & c.tipo.Equals("Saida") select c;
                     dataGridSaidas.ItemsSource = consulta2.ToList();
                 }
             }

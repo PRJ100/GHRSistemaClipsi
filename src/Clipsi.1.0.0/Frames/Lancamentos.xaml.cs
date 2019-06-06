@@ -42,6 +42,7 @@ namespace Teste.Frams
             l.descricao = TextBoxDescricao.Text;
             l.forma_pagamento = comboBoxFormaPagamento.Text;
             l.valor = Convert.ToDecimal(TextBoxValor.Text);
+            l.mes = Convert.ToInt32(comboBoxMes.Text);
 
             if (operacao == "cadastrar")
             {
@@ -63,6 +64,7 @@ namespace Teste.Frams
                         l.descricao = TextBoxDescricao.Text;
                         l.forma_pagamento = comboBoxFormaPagamento.Text;
                         l.valor = Convert.ToDecimal(TextBoxValor.Text);
+                        l.mes = Convert.ToInt32(comboBoxMes.Text);
                         ctx.SaveChanges();
                     }
 
@@ -115,6 +117,7 @@ namespace Teste.Frams
             TextBoxDescricao.Text = "";
             comboBoxFormaPagamento.Text = "";
             TextBoxValor.Text = "";
+            comboBoxMes.Text = "";
         }
         private void AlteraBotoes(int op)
         {
@@ -173,6 +176,7 @@ namespace Teste.Frams
                 TextBoxDescricao.Text = l.descricao;
                 comboBoxFormaPagamento.Text = l.forma_pagamento;
                 TextBoxValor.Text = l.valor.ToString();
+                comboBoxMes.Text = Convert.ToString(l.mes);
                 
                 AlteraBotoes(3);
                 AlteraCampos(1);

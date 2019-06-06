@@ -142,6 +142,12 @@
     <Compile Include="Frames\AgendamentoConsultas.xaml.cs">
       <DependentUpon>AgendamentoConsultas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Frames\Anaminase.xaml.cs">
+      <DependentUpon>Anaminase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\AtendimentoMedico.xaml.cs">
+      <DependentUpon>AtendimentoMedico.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Frames\Cadastro.xaml.cs">
       <DependentUpon>Cadastro.xaml</DependentUpon>
     </Compile>
@@ -174,9 +180,6 @@
     </Compile>
     <Compile Include="Frames\RelatorioMensal.xaml.cs">
       <DependentUpon>RelatorioMensal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Frames\RelatoriosMensal.xaml.cs">
-      <DependentUpon>RelatoriosMensal.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -212,6 +215,14 @@
     <Page Include="Frames\AgendamentoConsultas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Frames\Anaminase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frames\AtendimentoMedico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Frames\Cadastro.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -254,10 +265,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Frames\RelatorioMensal.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Frames\RelatoriosMensal.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

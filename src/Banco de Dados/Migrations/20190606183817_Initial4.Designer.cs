@@ -4,14 +4,16 @@ using Banco_de_Dados.Dados;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Banco_de_Dados.Migrations
 {
     [DbContext(typeof(DbContexto))]
-    partial class DbContextoModelSnapshot : ModelSnapshot
+    [Migration("20190606183817_Initial4")]
+    partial class Initial4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

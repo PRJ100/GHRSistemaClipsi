@@ -28,7 +28,7 @@
             <TextBlock Text="Contrlo de Gastos - Geral" Width="249" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="21" FontWeight="Medium" Foreground="#FFF" Margin="55,0,0,-1" Height="25"/>
 
             <TextBox x:Name="textBoxBuscar" materialDesign:HintAssist.Hint="Buscar" materialDesign:HintAssist.IsFloating="True" Height="40" Margin="0,10,64,10" VerticalAlignment="Center" Grid.Column="1"/>
-            <Button x:Name="buttonBuscar" Width="49" Height="40" Background="{x:Null}" BorderBrush="{x:Null}"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Margin="0,9,10,11" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1">
+            <Button x:Name="buttonBuscar" Width="49" Height="40" Background="{x:Null}" BorderBrush="{x:Null}"  Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Margin="0,9,10,11" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Click="ButtonBuscar_Click" >
                 <materialDesign:PackIcon Kind="Search" Width="27" Height="Auto" Foreground="#000072"/>
             </Button>
         </Grid>
